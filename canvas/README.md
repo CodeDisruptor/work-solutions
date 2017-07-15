@@ -1,10 +1,10 @@
 # Canvas Drawing
-Most of the projects I've been working on are created in house. My job was to maintain the projects and add new
+Most of the projects I've been working on are created in-house. My job was to maintain the projects and add new
 features and modules over time. One such module was the creation of an online eye exam chart. I've been handed a paper
 form that the eye doctors have been using and tasked with creating this into the online sales and patient CRM. No
 further information was given, so I had to learn about eye exams on my own.
 
-A the project moved along, a request arose for making drawings on images that the doctors need to mark findings for
+As the project moved along, a request arose for making drawings on images that the doctors need to mark findings for
 future records. I had to come up with a solution, so my first thought was to use the HTML5 canvas element.
 Unfortunately, the CRM is not HTML5, so I could not just add it and stay standard conform. The solution was to have a
 popup window appear when clicking on one of the image diagrams. The popup contained the HTML5 needed for the drawing.
