@@ -1,0 +1,165 @@
+* {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #555;
+    font: normal 10pt Arial, Helvetica, sans-serif;
+    background: #8fb7cc;
+    text-align: center;
+}
+
+div {
+    vertical-align: top;
+}
+
+div#page {
+    width: 800px;
+    background: white;
+    border: 1px solid #C9E0ED;
+    margin: 5px auto;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    border-top: 3px solid #C9E0ED;
+}
+
+header > h1 {
+    padding: 10px 20px;
+    font-size: 200%;
+}
+
+section {
+    width: 100%;
+    display: table;
+}
+
+#content {
+    width: 780px;
+    padding: 10px;
+    display: table-cell;
+    text-align: left;
+}
+
+#content h1 {
+    margin-top: 10px;
+}
+
+#content h2 {
+    margin: 5px 0;
+}
+
+div.info-box {
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 2px solid #ffd324;
+    background: #fff6bf;
+    color: #514721;
+    font-weight: bold;
+    display: none;
+}
+
+footer {
+    padding: 10px;
+    margin: 10px 20px;
+    font-size: 0.8em;
+    text-align: center;
+    border-top: 1px solid #C9E0ED;
+    clear: both;
+}
+
+div.output {
+    border: none;
+    display: none;
+}
+
+a {
+    color: #000;
+    display: block;
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+a.anterior {
+    width: 188px;
+    height: 60px;
+    text-align: center;
+}
+
+a.posterior {
+    width: 220px;
+    height: 93px;
+}
+
+a.anterior:before,
+a.posterior:before {
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+}
+
+a.anterior:before {
+    content: url(../img/anterior.jpg);
+}
+
+a.posterior:before {
+    content: url(../img/posterior.jpg);
+}
+
+div#anterior,
+div#posterior {
+    margin: 25px 0;
+    display: none;
+}
+
+canvas {
+    border: 1px solid #000;
+    display: block;
+    margin: 5px 0;
+}
+
+canvas.anterior {
+    background: url(../img/anterior-large.jpg) no-repeat 0 0 transparent;
+}
+
+canvas.posterior {
+    background: url(../img/posterior-large.jpg) no-repeat 0 0 transparent;
+}
+
+#controls {
+    margin-top: 10px;
+}
+
+lable {
+    font-weight: bold;
+}
+
+button {
+    background-color: #effdff;
+    border: 1px solid #6faccf;
+    width: 63px;
+    color: #0066a4;
+    font-weight: bold;
+    font-size: 1em;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #6faccf;
+    border: 1px solid #effdff;
+    border: 1px solid #fff;
+    color: #effdff;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button#close {
+    display: none;
+}
