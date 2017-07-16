@@ -1,11 +1,10 @@
 $(document).ready(function() {
-    // Open json data file
-    // Normally, the Paho library would be used here to subscribe to the MQTT borker
-    // to receive the data, and the display would update as soon as new data is available.
+    // Open json data file Normally, the Paho library would be used here to subscribe to the
+    // MQTT broker to receive the data, and the display would update as soon as new data is available.
     $.ajax({
         url : 'js/data.json',
         type : 'get',
-        dataType: 'json',
+        dataType : 'json',
         success : function(payload) {
             let tbody = $('#sensor-status tbody');
 
@@ -27,13 +26,13 @@ $(document).ready(function() {
                     sensorCell.appendChild(document.createTextNode(item.sensor));
 
                     // Process Update Date
-                    var date = new Date(item.lastUpdate.replace(/-/g, '/'));
-                    updateCell.appendChild(document.createTextNode(date.toLocaleString()));
+                    let lastUpdateDate = new Date(item.lastUpdate.replace(/-/g, '/'));
+                    updateCell.appendChild(document.createTextNode(lastUpdateDate.toLocaleString()));
                     voltageCell.appendChild(document.createTextNode(item.lastVoltage));
 
                     // Process Temperature
-                    var minTemp = (item.minTemperature !== null) ? item.minTemperature : 0;
-                    var maxTemp = (item.maxTemperature !== null) ? item.maxTemperature : 0;
+                    let minTemp = (item.minTemperature !== null) ? item.minTemperature : 0;
+                    let maxTemp = (item.maxTemperature !== null) ? item.maxTemperature : 0;
 
                     // Check last temperature data
                     if (item.lastTemperature == -196.60) {
@@ -50,16 +49,15 @@ $(document).ready(function() {
                     if (item.sentNotice === null || item.sentNotice === '0000-00-00 00:00:00') {
                         noticeCell.appendChild(document.createTextNode(''));
                     } else {
-                        var date = new Date(item.sentNotice.replace(/-/g, '/'));
-
-                        noticeCell.appendChild(document.createTextNode(date.toLocaleString()));
+                        let noticeDate = new Date(item.sentNotice.replace(/-/g, '/'));
+                        noticeCell.appendChild(document.createTextNode(noticeDate.toLocaleString()));
                     }
 
                     // Process activation button
-                    var link = document.createElement('a');
+                    let link = document.createElement('a');
                     link.setAttribute('href', '#');
                     link.setAttribute('data-key', item.id);
-                    
+
                     if (item.maintenance == 1) {
                         link.setAttribute('class', 'button');
                         link.setAttribute('title', 'Sensor Active');
@@ -93,7 +91,7 @@ $(document).ready(function() {
         }
     });
 
-    // Changes the maintenance mode button on/off
+    // Changes the maintenance mode button on/off.
     // Normally would start an ajax request to switch the sensor maintenance on or off. The serverside script
     // then publishes the changes to the MQTT broker which then updates all subscribed clients.
     // Maintenance mode prevents the system from displaying warnings on workstation displays that
