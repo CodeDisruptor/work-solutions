@@ -1,0 +1,123 @@
+* {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    outline: none;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 100.01%;
+    text-align: center;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #000;
+    border-bottom: 2px solid #999;
+}
+
+header h1 {
+    color: #fff;
+    line-height: 80px;
+}
+
+nav {
+    width: 100%;
+    height: 25px;
+    background-color: #ccc;
+    display: block;
+}
+
+article {
+    text-align: left;
+    padding: 1em;
+}
+
+article h2 {
+    margin-bottom: 5px;
+}
+
+table#sensor-status {
+    width: 100%;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    margin-top: 0.5em;
+}
+
+table#sensor-status thead {
+    background-color: #ccc;
+    text-align: center;
+}
+
+table#sensor-status thead th {
+    padding: 0.5em;
+}
+
+table#sensor-status {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table#sensor-status tbody td {
+    text-align: center;
+    vertical-align: middle;
+    border-top: 1px solid #000;
+    font-size: 1em;
+    padding: 0.5em;
+}
+
+table#sensor-status tbody td.cold {
+    background-color: #06c9ec;
+}
+
+table#sensor-status tbody td.hot {
+    background-color: #f91737;
+}
+
+table#sensor-status tbody td.probe-warning {
+    background-color: #fdcf52;
+}
+
+table#sensor-status tbody td a.button {
+    width: 37px;
+    height: 20px;
+    color: #000;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+table#sensor-status tbody td a.button:before {
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+}
+
+table#sensor-status tbody td a.button[data-mode="on"]:before {
+    content: url("../img/on_off_switch_gray.jpg");
+}
+
+table#sensor-status tbody td a.button[data-mode="off"]:before {
+    content: url("../img/on_off_switch_gray.jpg");
+    margin-top: -20px;
+}
+
+/*=================== Responsive Start ===================*/
+@media screen and (max-width: 1280px) {
+    table#sensor-status thead th {
+        font-size: 0.8em;
+    }
+
+    table#sensor-status tbody td {
+        font-size: 0.7em;
+    }
+}
+/*==================== Responsive End ====================*/
